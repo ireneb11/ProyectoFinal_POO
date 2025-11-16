@@ -3,27 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Con este Script se activa la visualización de “Jugador” y se le activa la gravedad (useGravity) desde el código. 
 public class dinamica : MonoBehaviour
 {
-    private MeshRenderer m_Renderer_Jugador;
-    private Rigidbody rb_jugador;
+    // DECLARACIÓN DE VARIABLES
+    private MeshRenderer m_Renderer_Jugador;                     // MeshRenderer -> componente que hace visible un objeto 3D
+    private Rigidbody rb_jugador;                               // Rigidbody -> componente que le da física
+
+    private float coordenadaX, coordenadaY, coordenadaZ;
+    public float multiplicadorDesplazamiento = 8.0f;
+    private Vector3 velocidad_i;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //Selecciono las componentes Mesh y RigidBody del GameObject jugador  -> inicializar las variables
-        m_Renderer_Jugador = GetComponent<MeshRenderer>();
+        //GetComponent<>() busca un componente en el  objeto
+        m_Renderer_Jugador = GetComponent<MeshRenderer>();         //Busca el MeshRendered del GameObject y lo asigna a la variable
         rb_jugador = GetComponent<Rigidbody>();
 
+
+        //Activo la componentes Mesh y en RigidBody activo la gravedad del GameObject jugador 
+        m_Renderer_Jugador.enabled = true;      // Activa el MeshRenderer -> Si estuviera en false, el objeto no se vería en la escena, aunque seguiría existiendo
+        rb_jugador.useGravity = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Activo la componentes Mesh y en RigidBody activo la gravedad del GameObject jugador 
-        m_Renderer_Jugador.enabled = true;      // Activa el MeshRenderer -> Si estuviera en false, el objeto no se vería en la escena, aunque seguiría existiendo
-        rb_jugador.useGravity = true;
+        // MOVERNOS POR TECLADO
+        
+        coordenadaY = rb_jugador.linearVelocity.y;   // obtenemos la componente 'y' de la velocidad del rigidbody. Hay fuerzas que afectaran al eje Y, no queremos que el jugador lo controle por el teclado
+
+        //Pido a Unity el desplzamiento horizontal y vertical desde el teclado y lo multiplico por un incremento (velocidad del movimiento del jugador[8.0f]).
+        coordenadaX = Input.GetAxis("Horizontal") * multiplicadorDesplazamiento;  // A / Flecha izquierda = -1    // D / Flecha derecha= 1.
+        coordenadaZ = Input.GetAxis("Vertical") * multiplicadorDesplazamiento;    // S / Flecha abajo => "Vertical" =-1      // W / Flecha arriba = 1
+
+
+        //Creo la nueva velocidad, considerando que la coordenada Y no la controlo por teclado.
+        velocidad_i = new Vector3(coordenadaX, coordenadaY, coordenadaZ);     //x,z -> horizontal      y -> vertical
+
+        //Actualizo en cada instante la velocidad y, en consecuencia, la posición.
+        rb_jugador.linearVelocity = velocidad_i;   // Le dices al RigidBody cual es su nueva velocidad en cada frame
     }
 }

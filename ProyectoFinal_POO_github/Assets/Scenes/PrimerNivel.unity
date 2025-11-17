@@ -210,7 +210,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 465f16c90b6764b45b3f26bc850acfea, type: 2}
+  - {fileID: 2100000, guid: 4db0715837a7e6b489db565f03308150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -522,6 +522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1106335197}
+  - component: {fileID: 1106335198}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -548,6 +549,18 @@ Transform:
   - {fileID: 1330699264}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106335198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106335196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e7d32d377d90a479b34492ea9ab961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295338647
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +625,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d9b7c6fae63e39a4594531c9ea5b42e1, type: 2}
+  - {fileID: 2100000, guid: c8f59b1eed0be5a42aa4ddacb7ba3e9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -748,7 +761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 465f16c90b6764b45b3f26bc850acfea, type: 2}
+  - {fileID: 2100000, guid: 4db0715837a7e6b489db565f03308150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1034,7 +1047,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 465f16c90b6764b45b3f26bc850acfea, type: 2}
+  - {fileID: 2100000, guid: 4db0715837a7e6b489db565f03308150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1092,6 +1105,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1106335197}
     m_Modifications:
+    - target: {fileID: 117671082673889396, guid: 04df99a4444988547b7a4cdd5c52a353, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4db0715837a7e6b489db565f03308150, type: 2}
     - target: {fileID: 178799627038538176, guid: 04df99a4444988547b7a4cdd5c52a353, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.672253

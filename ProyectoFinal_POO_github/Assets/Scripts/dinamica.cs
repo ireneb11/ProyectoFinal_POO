@@ -46,4 +46,18 @@ public class dinamica : MonoBehaviour
         //Actualizo en cada instante la velocidad y, en consecuencia, la posición.
         rb_jugador.linearVelocity = velocidad_i;   // Le dices al RigidBody cual es su nueva velocidad en cada frame
     }
+
+    private void OnCollisionEnter(Collision collision)      // cuando este GameObject colisiona con otro
+    {
+        GameObject colisionado = collision.gameObject;     // Obtiene el GameObject con el que ocurrió la colisión
+        GameObject colisionante = this.gameObject;          // Obtiene el GameObject que está colisionando, es decir, el que tiene este script
+        Debug.Log("Me lo he zampado");                      // Imprime un mensaje en la consola para indicar que ha sucedido la colisión
+        string tagColisionado = colisionado.tag;            // Obtiene la etiqueta (tag) del objeto colisionado
+        string tagColisionante = colisionante.tag;          // Obtiene la etiqueta (tag) del objeto que está colisionando
+
+        if (tagColisionado == "Eatable")                    // Si el objeto colisionado tiene la etiqueta "Eatable"
+        {
+            Destroy(colisionado);                           // Destruye el objeto colisionado
+        }
+    }
 }

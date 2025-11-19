@@ -13,6 +13,9 @@ public class dinamica : MonoBehaviour
     public float multiplicadorDesplazamiento = 8.0f;
     private Vector3 velocidad_i;
 
+    private GameObject gameManager;
+    private AudioSource eaten;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,11 @@ public class dinamica : MonoBehaviour
         //Activo la componentes Mesh y en RigidBody activo la gravedad del GameObject jugador 
         m_Renderer_Jugador.enabled = true;      // Activa el MeshRenderer -> Si estuviera en false, el objeto no se vería en la escena, aunque seguiría existiendo
         rb_jugador.useGravity = true;
+
+        // AUDIO 
+        // tenemos que seleccionar el GameObject GameManager que es el que contiene los audios
+        gameManager = GameObject.Find("GameManager");     // Cargo el objeto donde está el componente de audio
+        eaten = gameManager.GetComponent<AudioSource>();   // cargo el sonido de captura del bonus
     }
 
     // Update is called once per frame
@@ -57,7 +65,10 @@ public class dinamica : MonoBehaviour
 
         if (tagColisionado == "Eatable")                    // Si el objeto colisionado tiene la etiqueta "Eatable"
         {
+            eaten.Play();                                  // reproduzco el sonido
             Destroy(colisionado);                           // Destruye el objeto colisionado
         }
+
+        
     }
 }

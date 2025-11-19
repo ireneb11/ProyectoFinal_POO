@@ -28,13 +28,13 @@ public class GameManager : MonoBehaviour      // gameManager hereda de MonoBehav
 
         if (numBonus == 0)                      // Si no hay bonus, significa que el jugador ha terminado el nivel
         {
-            if (nivel == 0)                    // nivel es el índice de la escena (buildIndex)
+            if (nivel == 1)                    // nivel es el índice de la escena (buildIndex)
             {                                  
-                SceneManager.LoadScene(1);     // Si el nivel actual es 0 -> carga la escena 1
+                SceneManager.LoadScene(2);     // Si el nivel actual es 0 -> carga la escena 1
             }
-            else if (nivel == 1)
+            else if (nivel == 2)
             {
-                SceneManager.LoadScene(0);    // Si el nivel actual es 1 -> carga la escena 0.
+                SceneManager.LoadScene(1);    // Si el nivel actual es 1 -> carga la escena 0.
             }
         }
 

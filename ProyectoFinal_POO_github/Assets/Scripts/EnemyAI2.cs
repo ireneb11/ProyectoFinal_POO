@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EnemyAI2 : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class EnemyAI2 : MonoBehaviour
     public float attackCooldown = 2f;
     public float patrolIdleTime = 3f;
     public float rotationSpeed = 7f;
-    public float attackDuration = 2.0f; // Duration of attack animation 
+    public float attackDuration = 1.75f; // Duration of attack animation 
 
     private NavMeshAgent agent;
     private float cooldownTimer;
@@ -31,8 +32,15 @@ public class EnemyAI2 : MonoBehaviour
     private enum State { Patrol, Chase, Attack }
     private State currentState;
 
+
+
+    public GameObject gameOverCanvas;  // canvas con el mensaje de Atrapado
+    private bool gameOver = false;  // para proteger el update cuando el enemigo mata al jugador
+
     void Start()
     {
+        gameOverCanvas.SetActive(false);   // empieza el canvas oculto
+
         agent = GetComponent<NavMeshAgent>();
         if (animator == null) animator = GetComponent<Animator>();
         if (playerHealth == null && player != null) playerHealth = player.GetComponent<PlayerHealth>();
@@ -46,6 +54,7 @@ public class EnemyAI2 : MonoBehaviour
 
     void Update()
     {
+        if (gameOver || player == null) return;
         cooldownTimer -= Time.deltaTime;
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -161,6 +170,7 @@ public class EnemyAI2 : MonoBehaviour
         // Espera a que termine la animación antes de Game Over
         Invoke(nameof(TriggerGameOver), attackDuration);
 
+        
     }
     void TriggerGameOver()
     {
@@ -168,11 +178,27 @@ public class EnemyAI2 : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) <= attackRange)
         {
             Debug.Log("Game Over");
-            SceneManager.LoadScene("GameOver");
+            // SceneManager.LoadScene("GameOver");    //cambia de escena a la de game over
+            gameOverCanvas.SetActive(true);    // muestra el canvas 
+
+            // Destruir jugador
+            // player.gameObject.SetActive(false);
+            player = null;
+            
+            Time.timeScale = 0f;    // para el juego
+            StartCoroutine(EsperarYContinuar());  // lanza la espera
+             
         }
     }
 
-    
+    IEnumerator EsperarYContinuar()
+    {
+        yield return new WaitForSecondsRealtime(2f); // espera REAL aunque el juego esté en pausa
+
+        Time.timeScale = 1f; // MUY IMPORTANTE: reanudar el tiempo
+        SceneManager.LoadScene("ScreenStart");
+    }
+
 
     public void EndAttack()
     {

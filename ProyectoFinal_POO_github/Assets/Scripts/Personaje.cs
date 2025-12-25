@@ -10,7 +10,7 @@ public class Personaje : MonoBehaviour
     // VARIABLES DE MOVIMIENTO   ===============================
 
     public float multiplicadorVelocidad = 8.0f;   // Multiplicador para la velocidad de desplazamiento del personaje    // AL ser estática, esta variable es compartida entre todas las instancias de esta clase.
-    public float multiplicadorRotacion = 10.0f;   // Multiplicador para la velocidad de rotación del personaje
+    public float multiplicadorRotacion = 200.0f;   // Multiplicador para la velocidad de rotación del personaje
 
     
     
@@ -79,7 +79,8 @@ public class Personaje : MonoBehaviour
         // APLICAMOS EL MOVIMIENTO TOTAL
         transform.Translate(movimientoFrontal + movimientoLateral, Space.World);
         
-        // transform.Translate(0.0f, 0.0f, (Time.deltaTime * multiplicadorVelocidad) * listenerY,Space.Self);
+        
+        // transform.Translate(0.0f, 0.0f, (Time.deltaTime * multiplicadorVelocidad) * listenerY);
 
 
 

@@ -104,7 +104,8 @@ public class Personaje : MonoBehaviour
         if (tagColisionado == "Eatable")                    // Si el objeto colisionado tiene la etiqueta "Eatable"
         {
             eaten.Play();                                  // reproduzco el sonido
-            Destroy(colisionado);                           // Destruye el objeto colisionado
+            Destroy(colisionado);  // Destruye el objeto colisionado
+            ScoreManagement.instance.AddPoint();
         }
 
 

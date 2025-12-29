@@ -65,7 +65,8 @@ public class Personaje : MonoBehaviour
 
         // Rotamos al personaje sobre su eje Y (arriba y abajo) según la entrada en el eje Horizontal.
         // "Tine.deltaTime'asegura que la rotación sea consistente independientemente del rendimiento del dispositivo.
-        transform.Rotate(0.0f, (Time.deltaTime * multiplicadorRotacion) * listenerX, 0.0f);
+        
+        // transform.Rotate(0.0f, (Time.deltaTime * multiplicadorRotacion) * listenerX, 0.0f);
 
 
 
@@ -104,8 +105,19 @@ public class Personaje : MonoBehaviour
         if (tagColisionado == "Eatable")                    // Si el objeto colisionado tiene la etiqueta "Eatable"
         {
             eaten.Play();                                  // reproduzco el sonido
+
+            // obtener la moneda asocial al objeto
+            GameObject moneda = null;
+            EatableObjects eatable = colisionado.GetComponent<EatableObjects>();
+            if (eatable != null)
+            {
+                moneda = eatable.imagenCorrespondiente;
+            }
+
             Destroy(colisionado);  // Destruye el objeto colisionado
-            ScoreManagement.instance.AddPoint();
+
+            // Pasar la moneda al ScoreManagement
+            ScoreManagement.instance.AddPoint(moneda);
         }
 
 

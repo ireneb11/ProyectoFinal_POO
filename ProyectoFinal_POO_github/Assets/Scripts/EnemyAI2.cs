@@ -183,8 +183,21 @@ public class EnemyAI2 : MonoBehaviour
 
             // Destruir jugador
             // player.gameObject.SetActive(false);
-            player = null;
+
+            // Ocultar el modelo del jugador
+            SkinnedMeshRenderer[] meshes = player.GetComponentsInChildren<SkinnedMeshRenderer>();
+            foreach (SkinnedMeshRenderer mesh in meshes)
+            {
+                mesh.enabled = false;
+            }
+
+            // esactivar animaciones
+            Animator playerAnimator = player.GetComponent<Animator>();
+            if (playerAnimator != null)
+                playerAnimator.enabled = false;
             
+            player = null;    // Evita que el enemigo siga usando al jugador
+
             Time.timeScale = 0f;    // para el juego
             StartCoroutine(EsperarYContinuar());  // lanza la espera
              

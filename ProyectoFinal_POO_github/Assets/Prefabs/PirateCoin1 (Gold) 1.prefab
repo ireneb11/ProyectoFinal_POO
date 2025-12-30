@@ -102,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAxis: 2
   rotationSpeed: 1.37
-  upDownAmplitude: 0.06
-  upDownFrequency: 0.08
+  upDownAmplitude: 0.1
+  upDownFrequency: 0.1
 --- !u!65 &8806313256911817941
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -19147,7 +19147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &382725774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21134,7 +21134,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5775e727759a736488bc7114ef28474a, type: 2}
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   - {fileID: 2100000, guid: 00be43aa76f2614468d69cfb41a79505, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -21512,6 +21512,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: fe49d120fa444ca459f1b551c38be92c, type: 2}
+    - target: {fileID: 23359611640034198, guid: 54c64a0f8178a4546b067c41daae6e42, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75031,11 +75035,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1497883752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -430, y: 140}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -11.000061, y: -85}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1431095716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75060,7 +75064,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -77419,6 +77424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 23359611640034198, guid: 54c64a0f8178a4546b067c41daae6e42, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -79380,6 +79389,8 @@ GameObject:
   - component: {fileID: 1497883750}
   - component: {fileID: 1497883749}
   - component: {fileID: 1497883753}
+  - component: {fileID: 1497883754}
+  - component: {fileID: 1497883755}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -79492,6 +79503,38 @@ MonoBehaviour:
   - {fileID: 1944714826}
   - {fileID: 227922613}
   - {fileID: 1876074712}
+--- !u!114 &1497883754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497883748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f40982c11dae946bab9b2fc32516bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1497883755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497883748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f399859cbfc4ce4b98a83ce08508052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 382725773}
+  dialogueText: {fileID: 1421354974}
+  dialogueLines:
+  - 'Heloooooooooooo
+
+    safsgs
+
+    gadlgk'
 --- !u!1 &1498368290
 GameObject:
   m_ObjectHideFlags: 0
@@ -84601,6 +84644,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000000010536713
       objectReference: {fileID: 0}
+    - target: {fileID: 23359611640034198, guid: 54c64a0f8178a4546b067c41daae6e42, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -107087,7 +107134,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 00be43aa76f2614468d69cfb41a79505, type: 2}
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   - {fileID: 2100000, guid: 00be43aa76f2614468d69cfb41a79505, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

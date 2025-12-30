@@ -7,7 +7,6 @@ TagManager:
   - Jugador
   - Eatable
   - Wall
-  - OnlyVisibleMiniMap
   layers:
   - Default
   - TransparentFX
@@ -17,7 +16,7 @@ TagManager:
   - UI
   - Glow
   - player
-  - 
+  - Only Visible camera 2
   - 
   - 
   - 

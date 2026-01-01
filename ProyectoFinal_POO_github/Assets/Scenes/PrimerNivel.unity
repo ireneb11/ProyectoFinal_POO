@@ -20653,7 +20653,7 @@ GameObject:
   - component: {fileID: 409767021}
   - component: {fileID: 409767020}
   - component: {fileID: 409767022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24025,7 +24025,7 @@ PrefabInstance:
     - target: {fileID: 673464598350324358, guid: 4f244ac284b810d4e822419a2041138e, type: 3}
       propertyPath: Obstruction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 409767019}
     - target: {fileID: 6514066013810331838, guid: 4f244ac284b810d4e822419a2041138e, type: 3}
       propertyPath: m_Interpolate
       value: 0

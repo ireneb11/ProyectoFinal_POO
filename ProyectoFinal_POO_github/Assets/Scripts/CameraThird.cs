@@ -9,6 +9,8 @@ public class CameraThird : MonoBehaviour
     public Transform Obstruction;
     float zoomSpeed = 2f;
 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -66,7 +66,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:
-        m_Texture: {fileID: 2800000, guid: aca0e40c1888e2c488118d2ed82b8ad5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9eccbb07d6b64db459a718c90fcb504e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Normal:
+        m_Texture: {fileID: 2800000, guid: 310d1ec2ed5c49b4abeeb1835a5d28c2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -86,7 +90,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TrailMap:
-        m_Texture: {fileID: 2800000, guid: 88c867da65e59fe4f997be99e55fd3ba, type: 3}
+        m_Texture: {fileID: 8400000, guid: 4636da21ab1e3f24eb42577da2fd8f3d, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Trail_Normal:
+        m_Texture: {fileID: 2800000, guid: b94c589c22e0b454a8d9d1265e4aa333, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Trail_Texture:
@@ -125,7 +133,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height_Multiplier: 5.07
+    - _Height_Multiplier: 13.18
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -135,11 +143,14 @@ Material:
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
+    - _Snow_Gloss: 0.88
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Trail_Blending_Cap: 0.58
+    - _Trail_Blending_Cap: 0.4
+    - _Trail_Gloss: 0
+    - _Trail_Tilling: 10.91
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -147,6 +158,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Trail_Color: {r: 0.570089, g: 0.94716984, b: 0.9257087, a: 0}
+    - _Trail_Color: {r: 1, g: 0, b: 0.19176292, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

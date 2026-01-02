@@ -12,11 +12,6 @@ public class Personaje : MonoBehaviour
     public float multiplicadorVelocidad = 8.0f;   // Multiplicador para la velocidad de desplazamiento del personaje    // AL ser estática, esta variable es compartida entre todas las instancias de esta clase.
     public float multiplicadorRotacion = 200.0f;   // Multiplicador para la velocidad de rotación del personaje
 
-    
-    
-    
-
-
     // VARIABLES DE INPUT   ================================
     
     private float listenerX, listenerY;  // Entrada del teclado en los ejes X (horizontal) e Y (vertical).
@@ -31,17 +26,10 @@ public class Personaje : MonoBehaviour
     private AudioSource eaten;    // Sonido que se reproduce al coger un objeto "Eatable"
 
 
-
-
-
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-
-
-
 
         // Obtenemos el componente Animator del GameObject al que está asignado este script.
         // Esto permite manipular las animaciones asociadas al persd aje.
@@ -77,12 +65,11 @@ public class Personaje : MonoBehaviour
         Vector3 movimientoFrontal = transform.forward * listenerY * multiplicadorVelocidad * Time.deltaTime;
         // MOVIMIENTO LATERAL (strafe)
         Vector3 movimientoLateral = transform.right * listenerX * multiplicadorVelocidad * Time.deltaTime;
+
+
         // APLICAMOS EL MOVIMIENTO TOTAL
         transform.Translate(movimientoFrontal + movimientoLateral, Space.World);
         
-        
-        // transform.Translate(0.0f, 0.0f, (Time.deltaTime * multiplicadorVelocidad) * listenerY);
-
 
 
 
@@ -122,4 +109,7 @@ public class Personaje : MonoBehaviour
 
 
     }
+
+
+    
 }

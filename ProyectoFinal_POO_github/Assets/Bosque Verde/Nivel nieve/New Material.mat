@@ -66,11 +66,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:
-        m_Texture: {fileID: 2800000, guid: 9eccbb07d6b64db459a718c90fcb504e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 274f3d84636d27145a6694ee877b603f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Normal:
-        m_Texture: {fileID: 2800000, guid: 310d1ec2ed5c49b4abeeb1835a5d28c2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 700c35f5b87eb414f8c015fe9afe3771, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -149,7 +149,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Trail_Blending_Cap: 0.4
-    - _Trail_Gloss: 0
+    - _Trail_Gloss: 1.15
     - _Trail_Tilling: 10.91
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -158,6 +158,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Trail_Color: {r: 1, g: 0, b: 0.19176292, a: 0}
+    - _Trail_Color: {r: 0, g: 0.98589873, b: 1, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour      // gameManager hereda de MonoBehav
             }
             if (nivel == 5)                    // si es el nivel 5
             {
-                SceneManager.LoadScene(0);
-                // GanarPartida();   // has ganado
+               
+                GanarPartida();   // has ganado
             }
 
         }

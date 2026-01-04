@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1445984903077665415
+--- !u!1001 &373887553956474168
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -240.70157
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.686546
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -223.12135
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63,10 +63,14 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cda71fc0236798049b1d6522dc0305e4, type: 2}
+      objectReference: {fileID: 2100000, guid: 49871e0edfe893848a1569d95579452b, type: 2}
     - target: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_Name
-      value: Crystal H
+      value: Amethyst Crystal-H
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
+      propertyPath: m_TagString
+      value: Eatable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74,39 +78,39 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 460918333401884702}
+      addedObject: {fileID: 6409745394495348711}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 309001284588537813}
+      addedObject: {fileID: 5086595205740747086}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5896242972787120386}
+      addedObject: {fileID: 6807848594396671411}
   m_SourcePrefab: {fileID: 100100000, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
---- !u!1 &1788001939112896470 stripped
+--- !u!1 &716416961202802793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
-  m_PrefabInstance: {fileID: 1445984903077665415}
+  m_PrefabInstance: {fileID: 373887553956474168}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &460918333401884702
+--- !u!114 &6409745394495348711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 716416961202802793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1e58cb726bfdf44a8de0555b314d152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imagenCorrespondiente: {fileID: 0}
---- !u!114 &309001284588537813
+--- !u!114 &5086595205740747086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 716416961202802793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33656f7bf893ab04883f5e269fc0df7a, type: 3}
@@ -116,13 +120,13 @@ MonoBehaviour:
   rotationSpeed: 1.58
   upDownAmplitude: 0.75
   upDownFrequency: 0.3
---- !u!136 &5896242972787120386
+--- !u!136 &6807848594396671411
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 716416961202802793}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -138,4 +142,4 @@ CapsuleCollider:
   m_Radius: 0.006367425
   m_Height: 0.013577597
   m_Direction: 1
-  m_Center: {x: -0.00025658123, y: 0.0006887593, z: 0.0012427178}
+  m_Center: {x: -0.00025610437, y: 0.0006887593, z: 0.0012427476}

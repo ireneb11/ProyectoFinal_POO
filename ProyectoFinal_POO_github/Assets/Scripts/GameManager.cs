@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour      // gameManager hereda de MonoBehav
     private string nombreNivel;                   // guarda el nombre de la escena actual
     private GameObject miGestor, miJugador;       // miGestor ? referencia al GameObject que contiene este script  (GameManager)
                                                   // miJugador ? referencia al jugador
-
+    //YOU WIN
+    public GameObject youWinPanel;
+    private bool hasWon = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +21,9 @@ public class GameManager : MonoBehaviour      // gameManager hereda de MonoBehav
         nombreNivel = escenaActiva.name;                       // Guardas el nombre de la escena activa en la variable nombreNivel
         nivel = escenaActiva.buildIndex;                      // índice de la escena en la lista de Build Settings.
         miGestor = this.gameObject;                           // Guarda el GameObject que contiene este script en la variable miGestor
+
+        if (youWinPanel != null)
+            youWinPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,15 +33,57 @@ public class GameManager : MonoBehaviour      // gameManager hereda de MonoBehav
 
         if (numBonus == 0)                      // Si no hay bonus, significa que el jugador ha terminado el nivel
         {
+            /*
             if (nivel == 1)                    // nivel es el índice de la escena (buildIndex)
-            {                                  
+            {
                 SceneManager.LoadScene(2);     // Si el nivel actual es 0 -> carga la escena 1
             }
             else if (nivel == 2)
             {
-                SceneManager.LoadScene(1);    // Si el nivel actual es 1 -> carga la escena 0.
+                SceneManager.LoadScene(3);    // Si el nivel actual es 1 -> carga la escena 0.
             }
+            */
+
+            for (int i = 1; i < 5; i++)
+            {
+                if (nivel == i)                    // nivel es el índice de la escena (buildIndex)
+                {
+                    SceneManager.LoadScene(i + 1);     // Si el nivel actual es 0 -> carga la escena 1
+                }
+            }
+            if (nivel == 5)                    // si es el nivel 5
+            {
+                SceneManager.LoadScene(0);
+                // GanarPartida();   // has ganado
+            }
+
         }
 
+    }
+
+    void GanarPartida() {
+        Debug.Log("YOU WIN");
+
+        hasWon = true;
+        // Mostrar panel
+        youWinPanel.SetActive(true);
+
+        // Parar todos los enemigos
+        EnemyAI2[] enemigos = FindObjectsOfType<EnemyAI2>();
+        foreach (EnemyAI2 enemigo in enemigos)
+        {
+            enemigo.StopEnemy();
+        }
+
+        Time.timeScale = 0f;    // para el juego
+        StartCoroutine(EsperarYContinuar());  // lanza la espera
+    }
+
+    IEnumerator EsperarYContinuar()
+    {
+        yield return new WaitForSecondsRealtime(3f); // espera REAL aunque el juego esté en pausa
+
+        Time.timeScale = 1f; // MUY IMPORTANTE: reanudar el tiempo
+        SceneManager.LoadScene("ScreenStart");
     }
 }

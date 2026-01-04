@@ -33,7 +33,7 @@ public class EnemyAI2 : MonoBehaviour
     private State currentState;
 
 
-
+    //GAME OVER 
     public GameObject gameOverCanvas;  // canvas con el mensaje de Atrapado
     private bool gameOver = false;  // para proteger el update cuando el enemigo mata al jugador
 
@@ -191,7 +191,7 @@ public class EnemyAI2 : MonoBehaviour
                 mesh.enabled = false;
             }
 
-            // esactivar animaciones
+            // Desactivar animaciones
             Animator playerAnimator = player.GetComponent<Animator>();
             if (playerAnimator != null)
                 playerAnimator.enabled = false;
@@ -248,6 +248,18 @@ public class EnemyAI2 : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(agent.velocity.normalized);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
         }
+    }
+
+    public void StopEnemy()
+    {
+        
+
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+
+        player = null;
     }
 }
 

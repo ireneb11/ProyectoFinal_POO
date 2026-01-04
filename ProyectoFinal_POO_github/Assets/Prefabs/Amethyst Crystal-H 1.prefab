@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1445984903077665415
+--- !u!1001 &7717920603438960627
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -240.70157
+      value: -0.051
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.686546
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -223.12135
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63,10 +63,14 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cda71fc0236798049b1d6522dc0305e4, type: 2}
+      objectReference: {fileID: 2100000, guid: 9df17278d99a8764aae935752f67b3e0, type: 2}
     - target: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       propertyPath: m_Name
-      value: Crystal H
+      value: Amethyst Crystal-H 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
+      propertyPath: m_TagString
+      value: Eatable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74,39 +78,39 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 460918333401884702}
+      addedObject: {fileID: 1944860439195734792}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 309001284588537813}
+      addedObject: {fileID: 3880453025851636316}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5896242972787120386}
+      addedObject: {fileID: 8557947140747165413}
   m_SourcePrefab: {fileID: 100100000, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
---- !u!1 &1788001939112896470 stripped
+--- !u!1 &7483546842390131362 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a19ee34d000b64642a6f105424f812d9, type: 3}
-  m_PrefabInstance: {fileID: 1445984903077665415}
+  m_PrefabInstance: {fileID: 7717920603438960627}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &460918333401884702
+--- !u!114 &1944860439195734792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 7483546842390131362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1e58cb726bfdf44a8de0555b314d152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imagenCorrespondiente: {fileID: 0}
---- !u!114 &309001284588537813
+--- !u!114 &3880453025851636316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 7483546842390131362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33656f7bf893ab04883f5e269fc0df7a, type: 3}
@@ -116,13 +120,13 @@ MonoBehaviour:
   rotationSpeed: 1.58
   upDownAmplitude: 0.75
   upDownFrequency: 0.3
---- !u!136 &5896242972787120386
+--- !u!136 &8557947140747165413
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788001939112896470}
+  m_GameObject: {fileID: 7483546842390131362}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -135,7 +139,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.006367425
-  m_Height: 0.013577597
+  m_Radius: 0.006367426
+  m_Height: 0.013577599
   m_Direction: 1
-  m_Center: {x: -0.00025658123, y: 0.0006887593, z: 0.0012427178}
+  m_Center: {x: -0.0002561044, y: 0.0006887594, z: 0.0012427329}
